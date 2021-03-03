@@ -1,0 +1,41 @@
+<app-header></app-header>
+
+<div class="jumbotron">
+  <div class="container text-center">
+    <div class="col-sm-12">
+      <div class="embed-responsive embed-responsive-16by9">
+        <video class="video-js vjs-default-skin" width="640px" height="267px" controls autoplay
+          [poster]="videoItem.poster">
+          <source [src]="videoItem.link" type='video/mp4' />
+        </video>
+      </div>
+
+      <div>
+        <div class="row pt-10">
+          <div class="col-xs-2">
+            <div class="avatar avatar-xs mat-card-avatar rounded-circle">
+              <img [src]="videoItem.poster" alt="Avatar" class="avatar">
+            </div>
+          </div>
+          <div class="col-xs-10">
+            <div class="row">
+              <h5 class="sub-head fw-200 text-intent-50" (click)="playVideo(videoItem.intPk)">{{videoItem.title}}</h5>
+            </div>
+            <div class="col-xs-4">
+              <p class="p-10">{{videoItem.views}} Views</p>
+            </div>
+            <div class="col-xs-4">
+              <p class="p-10">{{videoItem.like}} Likes</p>
+            </div>
+            <div class="col-xs-4">
+              <p class="p-10">{{videoItem.unlike}} Unlikes</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<app-footer></app-footer>
